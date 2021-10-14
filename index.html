@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VeloBike</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue2-filters.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <p id="logo">Velobike</p>
+            <nav class="navbar navbar-expand-md navbar-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li>
+                                <router-link to="/">Home</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/ingresar">Ingresar</router-link>
+                            </li>
+                            <li>
+                                <router-link to="/recorridos">Mis Recorridos</router-link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div>
+            <transition mode="out-in" name="fade">
+                <router-view></router-view>
+            </transition>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>VELOBIKE</p>
+            <p>Todos los derechos reservados</p>
+        </div>
+        <div class="redes">
+            <ul>
+                <li><a href="https://www.facebook.com/" id="fb" target="_blank">Facebook </a></li>
+                <li><a href="https://www.instagram.com/" id="ig" target="_blank">Instagram </a></li>
+                <li><a href="https://web.whatsapp.com/%F0%9F%8C%90/es" id="wp" target="_blank">Whatsapp </a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/router/vue-router.js"></script>
+    <script src="js/componentes/ingresar.js"></script>
+    <script src="js/componentes/recorridos.js"></script>
+    <script src="js/router/app.js"></script>
+
+</body>
+
+</html>
